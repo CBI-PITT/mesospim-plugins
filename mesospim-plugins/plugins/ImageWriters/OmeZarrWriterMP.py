@@ -177,7 +177,6 @@ class OMEZarrWriterMP(ImageWriter):
         self._frame_shape = (X, Y)
 
     def open(self, req: WriteRequest) -> None:
-        print(f'{req.uri=}')
         assert self.compatible_suffix(req), f'URI suffix not compatible with {self.name()}'
 
         #######################
