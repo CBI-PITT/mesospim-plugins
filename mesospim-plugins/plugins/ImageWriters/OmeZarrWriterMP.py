@@ -29,7 +29,7 @@ if str(root) not in sys.path:
     sys.path.append(str(root))
 
 # Plugin specific imports
-from plugins.support_files.ImageWriters.OmeZarrWriter.omezarr_writer import (
+from plugins.support_files.ImageWriters.OmeZarrWriterMP.omezarr_writer import (
     PyramidSpec, ChunkScheme,
     Live3DPyramidWriter, plan_levels,
     compute_xy_only_levels, FlushPad,
