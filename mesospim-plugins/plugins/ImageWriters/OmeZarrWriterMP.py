@@ -333,7 +333,7 @@ class OMEZarrWriterMP(ImageWriter):
             compressor=compressor,
             shard_shape=shard_shape,
             flush_pad=FlushPad.DUPLICATE_LAST,
-            async_close=False, # Force sync close to ensure all data is written before proceeding
+            async_close=False, # Force sync close to ensure all data is written before proceeding, sync not compatible with Multiprocess
             translation=(acq['z_start'], acq['y_pos'], acq['x_pos']),
             ome_version=ome_version,
         )
